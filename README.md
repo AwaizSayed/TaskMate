@@ -171,7 +171,7 @@ git clone https://github.com/AwaizSayed/TaskMate.git
 ### Backend Setup
 
 ```bash
-cd Backend
+cd Server
 npm install
 npm start
 ```
@@ -179,7 +179,7 @@ npm start
 ### Frontend Setup
 
 ```bash
-cd Frontend
+cd TaskMateV1
 npm install
 npm run dev
 ```

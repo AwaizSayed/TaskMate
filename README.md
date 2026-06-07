@@ -1,196 +1,207 @@
-
-````markdown
 # ✅ TaskMate
 
-A simple yet powerful **Task Management Application** built with **MERN stack (MongoDB, Express, React, Node.js)**.  
-This project helps users **add, delete, update, and manage tasks** while keeping track of their status (active/completed).
+A full-stack Task Management application built using the MERN Stack (MongoDB, Express.js, React.js, and Node.js). The application helps users organize their daily tasks by allowing them to create, manage and track task completion status efficiently.
 
-Deployed on **Vercel** (Frontend + Backend).
-👉 Live Demo: [TaskMate on Vercel](https://task-mate-lac-one.vercel.app/) 
+---
+## 🌐 Live Demo
+
+### 🚀 Live Application:
+
+https://task-mate-49qm.vercel.app/
+
+⚠️ **Important:** The backend is hosted on Vercel's free serverless tier. The first request after a period of inactivity may take a few seconds to load due to a cold start. Please allow a moment for the application to initialize.
+
+---
+## 📌 Overview
+
+TaskMate is designed to simplify task management by providing a clean and intuitive interface for organizing daily activities.
+
+Users can add tasks, mark them as completed, switch between task views, and remove completed or unnecessary tasks. The application demonstrates full-stack web development concepts including REST APIs, database integration, state management, and deployment.
+
+---
+## 🎬 Project Demo
+
+[Add GIF Demo Here]
+
+---
+## 🎯 Key Features
+
+* Add new tasks
+* Delete existing tasks
+* Mark tasks as completed
+* View all tasks
+* Filter tasks by Active and Completed status
+* Responsive user interface
+* REST API integration
+* MongoDB Atlas database integration
+* Full-stack MERN architecture
+
+---
+## 📸 Screenshots & User Walkthrough
+
+### Step 1: Open the Application
+
+[Add Screenshot Here]
+
+Description:
+The user lands on the TaskMate dashboard where all tasks are displayed.
 
 ---
 
-## 🚀 Features
+### Step 2: Add a New Task
 
-- ➕ Add new tasks  
-- ✅ Mark tasks as completed  
-- ❌ Delete tasks  
-- 🔄 Switch between **All / Active / Completed** tabs  
-- 📱 Responsive UI with Bootstrap  
-- ⚡ Fast and lightweight frontend using **React + Vite**  
+[Add Screenshot Here]
+
+Description:
+Users can enter a task and add it to their task list.
 
 ---
 
-## 🏗️ Tech Stack
+### Step 3: View All Tasks
 
-**Frontend:** React (Vite), Bootstrap, Axios  
-**Backend:** Node.js, Express, MongoDB (Mongoose)  
-**Deployment:** Vercel (Full Stack)  
+[Add Screenshot Here]
+
+Description:
+All tasks are displayed in a structured list for easy management.
 
 ---
 
+### Step 4: Mark Task as Completed
+
+[Add Screenshot Here]
+
+Description:
+Users can mark tasks as completed, helping them track progress.
+
+---
+
+### Step 5: Filter Tasks
+
+[Add Screenshot Here]
+
+Description:
+Users can switch between All, Active, and Completed task views.
+
+---
+
+### Step 6: Delete a Task
+
+[Add Screenshot Here]
+
+Description:
+Users can remove tasks that are no longer needed.
+
+---
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* Vite
+* JavaScript (ES6+)
+* Bootstrap
+* HTML5
+* CSS3
+* MDB(Material Design for bootstrap)
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB Atlas
+* Mongoose
+
+### Deployment
+
+* Vercel
+
+---
+## 📦 Libraries & Dependencies
+
+### Frontend Dependencies
+
+* react
+* axios
+* bootstrap
+* MDB(Material Design for bootstrap)
+
+### Backend Dependencies
+
+* express
+* mongoose
+* cors
+* dotenv
+
+---
 ## 📂 Project Structure
 
 ```plaintext
 TaskMate/
 │
-├── Server/                  # Backend (Node.js + Express + MongoDB)
-├── TaskMateV1/              # Frontend (React + Vite)
+├── Server/
+│   ├── models/              # Mongoose schemas
+│   ├── index.js             # Express server
+│   └── vercel.json          # Vercel backend config
 │
-├── assets/                  # All static assets for docs
-│   ├── screenshots/         # App screenshots
-│   │   ├── home.png
-│   │   ├── active.png
-│   │   ├── completed.png
-│   │   └── add-task.png
-│   │
-│   ├── diagrams/            # UML, system design, flow diagrams
-│   │   ├── usecase.png
-│   │   ├── architecture.png
-│   │   ├── sequence.png
-│   │   └── erd.png
-│   │
-│   └── demo/                # Optional (video, gif demos)
-│       ├── walkthrough.gif
-│       └── demo.mp4
+├── TaskMateV1/
+│   ├── src/
+│   │   ├── Components/      # Reusable UI components
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
 │
-├── .env.example             # Example env file (without secrets)
-├── README.md                # Documentation
-````
-
----
-
-## ⚙️ Environment Variables
-
-Create a `.env` file inside `Server/` with the following variables:
-
-```env
-MONGO_URI=your_mongodb_connection_string
-PORT=5000
-```
-
-For the frontend (`TaskMateV1/.env`):
-
-```env
-VITE_REACT_APP_BACKEND_BASE_URL=https://your-vercel-backend-url.vercel.app
+├── README.md
+└── .gitignore
 ```
 
 ---
+## ⚙️ Installation & Execution
 
-## 🖥️ Installation & Setup
-
-Clone the repo:
+### Clone Repository
 
 ```bash
 git clone https://github.com/AwaizSayed/TaskMate.git
-cd TaskMate
 ```
 
 ### Backend Setup
 
 ```bash
-cd Server
+cd Backend
 npm install
-npm run dev
+npm start
 ```
 
 ### Frontend Setup
 
 ```bash
-cd TaskMateV1
+cd Frontend
 npm install
 npm run dev
 ```
 
-The app should now be running on `http://localhost:5173` 🚀
+### Environment Variables
+
+Backend `.env`
+
+```env
+MONGODB_URI=
+PORT=
+```
+
+Frontend `.env`
+
+```env
+VITE_BACKEND_URL=
+```
 
 ---
+## 👨‍💻 Author
 
-## 📸 Screenshots
+**Awaiz Sayed**
 
-### Home Page
-
-![Home Page](./assets/screenshots/home.png)
-
-### Active Tasks
-
-![Active Tasks](./assets/screenshots/active.png)
-
-### Completed Tasks
-
-![Completed Tasks](./assets/screenshots/completed.png)
-
-### Add Task
-
-![Add Task](./assets/screenshots/add-task.png)
-
----
-
-## 🖼️ Diagrams
-
-### Use Case Diagram
-
-![Use Case Diagram](./assets/diagrams/usecase.png)
-
-### System Architecture
-
-![System Architecture](./assets/diagrams/architecture.png)
-
-### Sequence Diagram
-
-![Sequence Diagram](./assets/diagrams/sequence.png)
-
-### Database ERD
-
-![Database ERD](./assets/diagrams/erd.png)
-
----
-
-## 📖 User Story
-
-As a **user**, I want to:
-
-* Add tasks I need to do
-* Mark them as completed once done
-* View pending vs completed tasks
-* Delete tasks I no longer need
-
-So that I can **organize my work efficiently**.
-
----
-
-## ⚡ Challenges Faced
-
-* Deploying both frontend and backend on Vercel with proper CORS handling
-* Managing **state updates** without unnecessary page reloads
-* Ensuring database connection stability with MongoDB Atlas
-* Debugging **404 errors** on deployment
-
----
-
-## 🚫 Limitations
-
-* No user authentication (anyone can access tasks)
-* Tasks are not user-specific (shared across all users in DB)
-* Minimal UI (basic Bootstrap only)
-* Error handling can be improved
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/awesome-feature`)
-3. Commit your changes (`git commit -m 'Add awesome feature'`)
-4. Push to the branch (`git push origin feature/awesome-feature`)
-5. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.
-
----
+GitHub: https://github.com/AwaizSayed

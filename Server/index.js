@@ -10,9 +10,7 @@ app.use(express.json());
 
 async function connectIt() {
   await mongoose
-    .connect(
-      `mongodb+srv://${process.env.DB_ACCOUNT_PASSWORD}@cluster0.q7zsbbq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
-    )
+    .connect(process.env.MONGODB_URI)
     .then(() => console.log("MongoDB connected"))
     .catch((err) => console.error(err));
 }
@@ -33,6 +31,7 @@ app.post("/add", async (req, res) => {
 
 app.get("/get", async (req, res) => {
   await TodoModel.find()
+    .sort({ _id: -1 })
     .then((result) => res.json(result))
     .catch((error) => res.json(error));
 });
@@ -61,6 +60,6 @@ app.delete("/delete/:id", async (req, res) => {
     .catch((err) => res.json(err));
 });
 
-app.listen(3001, async () => {
+app.listen(3002, async () => {
   console.log("Listening");
 });

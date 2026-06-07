@@ -8,11 +8,11 @@ function Home() {
   const [activeTab, setActiveTab] = useState("all");
   const listRef = useRef(null);
 
-  useEffect(() => {
-    if (listRef.current) {
-      listRef.current.scrollTop = listRef.current.scrollHeight;
-    }
-  }, [todos]);
+  // useEffect(() => {
+  //   if (listRef.current) {
+  //     listRef.current.scrollTop = listRef.current.scrollHeight;
+  //   }
+  // }, [todos]);
 
   useEffect(() => {
     axios

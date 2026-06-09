@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const TodoModel = require("../models/todosSchema");
 const dotenv = require("dotenv");
 
 dotenv.config();

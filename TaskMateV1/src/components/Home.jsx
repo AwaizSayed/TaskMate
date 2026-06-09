@@ -7,6 +7,7 @@ function Home() {
   const [task, setTask] = useState();
   const [activeTab, setActiveTab] = useState("all");
   const listRef = useRef(null);
+  // const [changeIt, setChangeIt] = useState(true);
 
   // useEffect(() => {
   //   if (listRef.current) {
@@ -28,7 +29,7 @@ function Home() {
   }
   useEffect(() => {
     getData();
-  }, []);
+  }, []); //changeIt
 
   const handelAdd = async () => {
     try {
@@ -69,8 +70,13 @@ function Home() {
           id,
       );
       if (data.data) {
-        // getData();
-        location.reload();
+        // console.log(changeIt);
+        // changeIt ? setChangeIt(false) : setChangeIt(true);
+        // console.log(changeIt);
+        // checkIt.checked = checkIt.checked ? false : true;
+        getData();
+
+        // location.reload();
       }
     } catch (error) {
       console.log(error);
@@ -177,6 +183,7 @@ function Home() {
                                   >
                                     Delete
                                   </button>
+                                  {/*Work going on here*/}
                                   <input
                                     className="form-check-input me-2"
                                     type="checkbox"
@@ -233,7 +240,13 @@ function Home() {
                                 >
                                   Delete
                                 </button>
-                                {todo.done ? (
+                                <input
+                                  className="form-check-input me-2"
+                                  type="checkbox"
+                                  checked={todo.done}
+                                  onChange={() => handleChange(todo._id)}
+                                />
+                                {/*todo.done ? (
                                   <input
                                     className="form-check-input me-2"
                                     type="checkbox"
@@ -250,7 +263,7 @@ function Home() {
                                     aria-label="..."
                                     onChange={() => handleChange(todo._id)}
                                   />
-                                )}
+                                )*/}
 
                                 {/* checked */}
                                 {todo.task}

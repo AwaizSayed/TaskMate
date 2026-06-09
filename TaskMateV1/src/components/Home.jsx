@@ -40,7 +40,7 @@ function Home() {
       );
       if (data.data) {
         getData();
-        location.reload();
+        // location.reload();
       }
     } catch (error) {
       console.log(error);
@@ -55,7 +55,7 @@ function Home() {
       );
       if (data.data) {
         getData();
-        location.reload();
+        // location.reload();
       }
     } catch (error) {
       console.log(error);
@@ -69,7 +69,7 @@ function Home() {
           id,
       );
       if (data.data) {
-        getData();
+        // getData();
         location.reload();
       }
     } catch (error) {

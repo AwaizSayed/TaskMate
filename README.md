@@ -3,6 +3,7 @@
 A full-stack Task Management application built using the MERN Stack (MongoDB, Express.js, React.js, and Node.js). The application helps users organize their daily tasks by allowing them to create, manage and track task completion status efficiently.
 
 ---
+
 ## 🌐 Live Demo
 
 ### 🚀 Live Application:
@@ -12,6 +13,7 @@ https://task-mate-49qm.vercel.app/
 ⚠️ **Important:** The backend is hosted on Vercel's free serverless tier. The first request after a period of inactivity may take a few seconds to load due to a cold start. Please allow a moment for the application to initialize.
 
 ---
+
 ## 📌 Overview
 
 TaskMate is designed to simplify task management by providing a clean and intuitive interface for organizing daily activities.
@@ -19,24 +21,27 @@ TaskMate is designed to simplify task management by providing a clean and intuit
 Users can add tasks, mark them as completed, switch between task views, and remove completed or unnecessary tasks. The application demonstrates full-stack web development concepts including REST APIs, database integration, state management, and deployment.
 
 ---
+
 ## 🎬 Project Demo
 
 [Add GIF Demo Here]
 
 ---
+
 ## 🎯 Key Features
 
-* Add new tasks
-* Delete existing tasks
-* Mark tasks as completed
-* View all tasks
-* Filter tasks by Active and Completed status
-* Responsive user interface
-* REST API integration
-* MongoDB Atlas database integration
-* Full-stack MERN architecture
+- Add new tasks
+- Delete existing tasks
+- Mark tasks as completed
+- View all tasks
+- Filter tasks by Active and Completed status
+- Responsive user interface
+- REST API integration
+- MongoDB Atlas database integration
+- Full-stack MERN architecture
 
 ---
+
 ## 📸 Screenshots & User Walkthrough
 
 ### Step 1: Open the Application
@@ -92,63 +97,71 @@ Description:
 Users can remove tasks that are no longer needed.
 
 ---
+
 ## 🛠️ Tech Stack
 
 ### Frontend
 
-* React.js
-* Vite
-* JavaScript (ES6+)
-* Bootstrap
-* HTML5
-* CSS3
-* MDB(Material Design for bootstrap)
+- React.js
+- Vite
+- JavaScript (ES6+)
+- Bootstrap
+- HTML5
+- CSS3
+- MDB(Material Design for bootstrap)
 
 ### Backend
 
-* Node.js
-* Express.js
+- Node.js
+- Express.js
 
 ### Database
 
-* MongoDB Atlas
-* Mongoose
+- MongoDB Atlas
+- Mongoose
 
 ### Deployment
 
-* Vercel
+- Vercel
 
 ---
+
 ## 📦 Libraries & Dependencies
 
 ### Frontend Dependencies
 
-* react
-* axios
-* bootstrap
-* MDB(Material Design for bootstrap)
+- react
+- axios
+- bootstrap
+- MDB(Material Design for bootstrap)
 
 ### Backend Dependencies
 
-* express
-* mongoose
-* cors
-* dotenv
+- express
+- mongoose
+- cors
+- dotenv
 
 ---
+
 ## 📂 Project Structure
 
 ```plaintext
 TaskMate/
 │
 ├── Server/
-│   ├── models/              # Mongoose schemas
-│   ├── index.js             # Express server
-│   └── vercel.json          # Vercel backend config
+│   ├── src/
+│   │   ├── config/                     # Database config
+│   │   ├── controllers/                # Business logic
+│   │   ├── models/                     # Mongoose schemas
+│   │   └── routers/                    # API routes
+│   │
+│   ├── index.js                        # Express server
+│   └── vercel.json                     # Vercel backend config
 │
 ├── TaskMateV1/
 │   ├── src/
-│   │   ├── Components/      # Reusable UI components
+│   │   ├── Components/                 # Reusable UI components
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   ├── public/
@@ -160,6 +173,7 @@ TaskMate/
 ```
 
 ---
+
 ## ⚙️ Installation & Execution
 
 ### Clone Repository
@@ -190,16 +204,17 @@ Backend `.env`
 
 ```env
 MONGODB_URI=
-PORT=
+NODE_FRONTEND_URL=
 ```
 
 Frontend `.env`
 
 ```env
-VITE_BACKEND_URL=
+VITE_REACT_APP_BACKEND_BASE_URL
 ```
 
 ---
+
 ## 👨‍💻 Author
 
 **Awaiz Sayed**

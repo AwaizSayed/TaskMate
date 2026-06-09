@@ -16,30 +16,39 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/get`)
+      .get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/get-todos`)
       .then((result) => setTodos(result.data))
       .catch((error) => console.log(error));
   }, []);
 
   const handelAdd = async () => {
     await axios
-      .post(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/add`, {
-        task: task,
-      })
+      .post(
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/add-todo`,
+        {
+          task: task,
+        },
+      )
       .then((result) => location.reload())
       .catch((error) => console.log(error));
   };
 
   const handleDelete = async (id) => {
     await axios
-      .delete(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/delete/` + id)
+      .delete(
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/delete-todo/` +
+          id,
+      )
       .then((result) => location.reload())
       .catch((err) => console.log(err));
   };
 
   const handleChange = async (id) => {
     await axios
-      .put(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/update/` + id)
+      .put(
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/update-todo/` +
+          id,
+      )
       .then((result) => location.reload())
       .catch((error) => console.log(error));
   };

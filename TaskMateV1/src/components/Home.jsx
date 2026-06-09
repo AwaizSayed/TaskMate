@@ -14,43 +14,64 @@ function Home() {
   //   }
   // }, [todos]);
 
+  async function getData() {
+    try {
+      const data = await axios.get(
+        `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/get-todos`,
+      );
+      if (data) {
+        setTodos(data.data);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/get-todos`)
-      .then((result) => setTodos(result.data))
-      .catch((error) => console.log(error));
+    getData();
   }, []);
 
   const handelAdd = async () => {
-    await axios
-      .post(
+    try {
+      const data = await axios.post(
         `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/add-todo`,
         {
           task: task,
         },
-      )
-      .then((result) => location.reload())
-      .catch((error) => console.log(error));
+      );
+      if (data.data) {
+        location.reload();
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleDelete = async (id) => {
-    await axios
-      .delete(
+    try {
+      const data = await axios.delete(
         `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/delete-todo/` +
           id,
-      )
-      .then((result) => location.reload())
-      .catch((err) => console.log(err));
+      );
+      if (data.data) {
+        location.reload();
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleChange = async (id) => {
-    await axios
-      .put(
+    try {
+      const data = await axios.put(
         `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/update-todo/` +
           id,
-      )
-      .then((result) => location.reload())
-      .catch((error) => console.log(error));
+      );
+      if (data.data) {
+        location.reload();
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

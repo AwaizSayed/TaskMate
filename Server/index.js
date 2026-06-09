@@ -5,7 +5,7 @@ const connectToDB = require("./src/config/db");
 const TodoModel = require("./src/models/todosSchema");
 const route = require("./src/routers/todosRouter");
 
-app.use(cors({ origin: [process.env.NODE_FRONTEND] }));
+app.use(cors({ origin: [process.env.NODE_FRONTEND_URL] }));
 
 app.use(express.json());
 

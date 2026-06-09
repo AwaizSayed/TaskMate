@@ -1,11 +1,10 @@
 const connectToDB = require("./src/config/db");
+connectToDB();
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const dotenv = require("dotenv");
 const route = require("./src/routers/todosRouter");
-
-connectToDB();
 
 dotenv.config();
 

@@ -4,12 +4,15 @@ const cors = require("cors");
 const connectToDB = require("./src/config/db");
 const TodoModel = require("./src/models/todosSchema");
 const route = require("./src/routers/todosRouter");
+const dotenv = require("dotenv");
 
-app.use(cors({ origin: [process.env.NODE_FRONTEND_URL] }));
+connectToDB();
+
+dotenv.config();
 
 app.use(express.json());
 
-connectToDB();
+app.use(cors({ origin: [process.env.NODE_FRONTEND_URL] }));
 
 app.use("/todo", route);
 

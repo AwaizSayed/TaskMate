@@ -31,7 +31,8 @@ function Home() {
     getData();
   }, []); //changeIt
 
-  const handelAdd = async () => {
+  const handelAdd = async (e) => {
+    e.preventDefault();
     try {
       const data = await axios.post(
         `${import.meta.env.VITE_REACT_APP_BACKEND_BASE_URL}/todo/add-todo`,
@@ -97,9 +98,7 @@ function Home() {
                       id="form2"
                       className="form-control"
                       placeholder="New Task..."
-                      onChange={(e) => {
-                        setTask(e.target.value);
-                      }}
+                      onChange={(e) => setTask(e.target.value)}
                     />
                   </div>
                   <button
